@@ -3,15 +3,8 @@
 ###############################################################################
 
 tap "bufbuild/buf"
-tap "caskroom/fonts"
 tap "derailed/k9s"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "jandedobbeleer/oh-my-posh"
 
 ###############################################################################
