@@ -278,8 +278,10 @@ vscode "waderyan.gitblame"
 ##  Cargo crates                                                             ##
 ###############################################################################
 
-cargo "cargo-clean-all"
-cargo "cargo-component"
-cargo "cargo-expand"
-cargo "wasm-tools"
-cargo "wkg"
+# Commenting these out for now b/c I think I'd rather hand install cargo with
+# the rustup toolchain and this seems to implicitly install rust.
+# cargo "cargo-clean-all"
+# cargo "cargo-component"
+# cargo "cargo-expand"
+# cargo "wasm-tools"
+# cargo "wkg"
