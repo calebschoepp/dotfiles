@@ -16,22 +16,76 @@ git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git pull origin main
 make osx
 ```
 
+## Manual Mac configuration
+
+- `System Settings` > `Appearance`
+  - Set `Appearance` to `Dark`
+- `System Settings` > `Sound`
+  - Disable `Play sound on startup`
+- `System Settings` > `Trackpad` > `Point & Click`
+  - Crank up `Tracking speed` to about 7/10
+  - Enable `Tap to click`
+- `System Settings` > `Mouse`
+  - Crank up `Tracking speed` to about 8/10
+- `System Settings` > `Keyboard`
+  - Crank up `Key Repeat` to max
+  - Turn `Delay Until Repeat` to minimum
+  - Enable `Dictation`
+- `System Settings` > `Keyboard` > `Keyboard Shortcuts` > `Spotlight`
+  - Set `Show Spotlight search` to `⌥ Space`
+- `System Settings` > `Keyboard` > `Keyboard Shortcuts` > `Modifier Keys`
+  - Set `Caps Lock` to `Escape`
+
 ## Productivity Software
 
-TODO: Flesh out
+### Better Display
 
-- Rectangle pro
-- Vivid
-- Timery
-- Menu world time
-- BetterDisplay
-- Contexts
-- Logi Options+
-- Obsidian
-- ShurPlus
-- Google Drive
+Already installed via `brew`. The license is in 1Password.
 
-### Personal Software
+TODO: Monitor resolution configurations
+
+### Contexts
+
+Already installed via `brew`. To activate the license just download it from 1Password and click on it. Configure as follows:
+
+- `Sidebar`
+  - Set `Show sidebar on` to `No display`
+- `Search`
+  - Set `Search with` to `Command-Space`
+
+### Google Drive
+
+TODO
+
+### Logi Options+
+
+TODO
+
+### Menu World Time
+
+Install via [Appstore](https://apps.apple.com/us/app/menu-world-time/id1446377255)
+
+TODO: Clock configuration
+
+### Obsidian
+
+TODO
+
+### Rectangle Pro
+
+TODO
+
+### ShurPlus
+
+TODO
+
+### Timery
+
+Install via [Appstore](https://timeryapp.com/).
+
+TODO: More to do?
+
+## Personal Software
 
 TODO: Flesh out
 
@@ -42,17 +96,9 @@ TODO: Flesh out
 - MyWhoosh
 - UaConnect
 
-## Manual Mac configuration
-
-TODO: Flesh out
-TODO: Try to automate
-
-- Mouse speed
-- Tap to click
-
 ## Manual Google Chrome configuration
 
-- Search shortcuts for github `g` and rust docs `r
+- Search shortcuts for github `g` and rust docs `r`
 - Extensions
   - 1password
   - adblcok
