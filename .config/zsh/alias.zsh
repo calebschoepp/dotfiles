@@ -22,11 +22,6 @@ alias k9s="k9s --logoless"
 alias spinrelease="~/src/spinframework/spin/target/release/spin"
 alias spindebug="~/src/spinframework/spin/target/debug/spin"
 
-# Kubectl autocompletion
-source <(kubectl completion zsh)
-alias k=kubectl
-complete -F __start_kubectl k
-
 # Git aliases and conveniences
 alias gist="git status"
 alias gich="git checkout"

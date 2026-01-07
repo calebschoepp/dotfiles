@@ -55,6 +55,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# Kubectl autocompletion
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
+
 ## Put ~/bin ~/.local/bin $GOPATH/bin ~/.cargo/bin in PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
