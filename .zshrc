@@ -1,1 +1,1 @@
-.config/zsh/rc
+source .config/zsh/rc

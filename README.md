@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo contains my personal configuration along with documentation for any tools or preferences I have that must be manually setup. Largely based off of [this](https://github.com/endocrimes/dotfiles). Focuses on configuring over provisioning (but does some provisioning e.g. `brew`).
+This repo contains my personal dotfile configuration along with documentation for any software or preferences I have that must be manually setup. Largely based off of [this](https://github.com/endocrimes/dotfiles). Focuses on configuring over provisioning (but does some provisioning e.g. `brew`).
 
 ## Installation
 
@@ -18,7 +18,7 @@ make osx
 
 ## Productivity Software
 
-TODO
+TODO: Flesh out
 
 - Rectangle pro
 - Vivid
@@ -28,16 +28,41 @@ TODO
 - Contexts
 - Logi Options+
 - Obsidian
+- ShurPlus
+- Google Drive
 
 ### Personal Software
 
-TODO
+TODO: Flesh out
 
 - Cockatrice
 - Guitar Pro 8
 - Logic Pro
 - MuseScore 4
 - MyWhoosh
+- UaConnect
+
+## Manual Mac configuration
+
+TODO: Flesh out
+TODO: Try to automate
+
+- Mouse speed
+- Tap to click
+
+## Manual Google Chrome configuration
+
+- Search shortcuts for github `g` and rust docs `r
+- Extensions
+  - 1password
+  - adblcok
+  - appblock
+  - eyedropper
+  - hit tab and enter on google search results
+  - momentum
+  - privacy badger
+  - refined github
+  - unhook
 
 ## TODO
 
