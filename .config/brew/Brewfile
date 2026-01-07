@@ -117,8 +117,6 @@ brew "make"
 brew "moreutils"
 # Platform built on V8 to build network applications
 brew "node"
-# Replacement for Docker Desktop
-brew "orbstack"
 # Modern replacement for ps written by Rust
 brew "procs"
 # Show ps output as a tree
@@ -200,6 +198,8 @@ cask "font-source-code-pro"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Replacement for Docker Desktop
+cask "orbstack"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
