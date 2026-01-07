@@ -10,6 +10,6 @@ setopt inc_append_history       # add commands as they are typed, don't wait unt
 # setopt share_history          # share hist between sessions
 setopt bang_hist                # !keyword
 setopt hist_save_no_dups        # Do not write a duplicate event to the history file.
-setopt hist_no_store.           # Don't store history commands
-setopt extended_history.        # Write the history file in the ':start:elapsed;command' format.
+setopt hist_no_store            # Don't store history commands
+setopt extended_history         # Write the history file in the ':start:elapsed;command' format.
 HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*" # commands to ignore in history
