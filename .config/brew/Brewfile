@@ -168,6 +168,10 @@ brew "zsh"
 cask "1password-cli"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Display management tool
+cask "betterdisplay"
+# Allows switching between application windows
+cask "contexts"
 # Voice and text chat software
 cask "discord"
 # Developer targeted fonts with a high number of glyphs
@@ -206,6 +210,8 @@ cask "slack"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
+# Adaptive brightness for displays
+cask "vivid-app"
 
 ###############################################################################
 ##  VS Code Extensions                                                       ##
