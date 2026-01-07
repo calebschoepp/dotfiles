@@ -3,7 +3,7 @@
 osx: homebrew homebrew-packages osx-config
 
 homebrew:
-	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	command -v brew >/dev/null 2>&1 || (curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | /bin/bash)
 
 homebrew-packages:
 	brew bundle --file=.config/brew/Brewfile
