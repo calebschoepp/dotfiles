@@ -49,8 +49,6 @@ fi
 # Setup Homebrew Zsh completions
 if type brew &>/dev/null; then
   eval $(brew shellenv)
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
   autoload -Uz compinit
   compinit
 fi
