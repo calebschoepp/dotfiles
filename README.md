@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo contains my personal configuration along with documentation for any tools or preferences I have that must be manually setup. Largely based off of [this](https://github.com/endocrimes/dotfiles). Focuses on configuring over provisioning (but does some provisioning e.g. brew).
+This repo contains my personal configuration along with documentation for any tools or preferences I have that must be manually setup. Largely based off of [this](https://github.com/endocrimes/dotfiles). Focuses on configuring over provisioning (but does some provisioning e.g. `brew`).
 
 ## Installation
 
@@ -16,11 +16,9 @@ git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git pull origin main
 make osx
 ```
 
-## Manual software provisioning and configuration
+## Productivity Software
 
 TODO
-
-### Productivity
 
 - Rectangle pro
 - Vivid
@@ -31,7 +29,9 @@ TODO
 - Logi Options+
 - Obsidian
 
-### Personal
+### Personal Software
+
+TODO
 
 - Cockatrice
 - Guitar Pro 8
@@ -39,7 +39,7 @@ TODO
 - MuseScore 4
 - MyWhoosh
 
-# TODO
+## TODO
 
 - [ ] Setup zshrc private on new mac
 - [ ] ghostty config from endocrimes dotfiles
