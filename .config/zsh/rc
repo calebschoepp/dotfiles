@@ -1,0 +1,82 @@
+export EDITOR='vim'
+
+export CONFIG_HOME=$HOME/.config
+export ZSH_CONFIG_ROOT=$CONFIG_HOME/zsh
+export VIM_CONFIG_HOME=$CONFIG_HOME/vim
+
+if [ -f $ZSH_CONFIG_ROOT/autodetect.zsh ]; then
+  source $ZSH_CONFIG_ROOT/autodetect.zsh
+fi
+
+if [ -f $ZSH_CONFIG_ROOT/history.zsh ]; then
+  source $ZSH_CONFIG_ROOT/history.zsh
+fi
+
+# General
+#
+
+# Prompt
+
+if [ -f $ZSH_CONFIG_ROOT/prompt.zsh ]; then
+  source $ZSH_CONFIG_ROOT/prompt.zsh
+fi
+
+# defaults
+
+if [ -z $GOPATH ]; then
+  export GOPATH="$HOME/src"
+fi
+
+## Load Configs
+# Inheritance:
+# zsh/alias.sh
+#   zsh/$os/alias.sh
+
+if [ -f $ZSH_CONFIG_ROOT/alias.zsh ]; then
+  source $ZSH_CONFIG_ROOT/alias.zsh
+fi
+
+if [[ $LINUX = 1 ]]; then
+  if [ -f $ZSH_CONFIG_ROOT/linux/alias.zsh ]; then
+    source $ZSH_CONFIG_ROOT/linux/alias.zsh
+  fi
+elif [[ $OSX = 1 ]]; then
+  if [ -f $ZSH_CONFIG_ROOT/osx/alias.zsh ]; then
+    source $ZSH_CONFIG_ROOT/osx/alias.zsh
+  fi
+fi
+
+# Setup Homebrew Zsh completions
+if type brew &>/dev/null; then
+  eval $(brew shellenv)
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+## Put ~/bin ~/.local/bin $GOPATH/bin ~/.cargo/bin in PATH
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+## Fix keybindings
+# zsh introspects the EDITOR env var and automatically enables vi-bindings if
+# the editor contains `vi`. These bindings are kinda weird and broken when going
+# back into insert mode, so here we force emacs style bindings for compatibility
+# with remote servers too.
+bindkey -e
+
+autoload -U +X bashcompinit && bashcompinit
+
+# Anything private I can stick in ~/.zsh.private and it won't be checked in
+if [ -f $HOME/.zsh.private ]; then
+  source $HOME/.zsh.private
+fi
+
+# Make sure GPG works correctly with terminal
+export GPG_TTY="$(tty)"
+
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"

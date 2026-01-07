@@ -1,0 +1,11 @@
+[user]
+	name = Caleb Schoepp
+	email = caleb.schoepp@gmail.com # TODO: This is probably wrong
+	signingkey = FEA095EAF754EABA # TODO: This is probably wrong
+[commit]
+	gpgsign = true
+[url "git@github.com:"]
+	insteadOf = gh:
+[core]
+	excludesfile = ~/.config/git/gitignore
+	ignorecase = false

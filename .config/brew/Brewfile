@@ -1,0 +1,286 @@
+###############################################################################
+##  Taps                                                                     ##
+###############################################################################
+
+tap "bufbuild/buf"
+tap "caskroom/fonts"
+tap "derailed/k9s"
+tap "hashicorp/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "jandedobbeleer/oh-my-posh"
+
+###############################################################################
+##  Brews                                                                    ##
+###############################################################################
+
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# The best way of working with Protocol Buffers.
+brew "bufbuild/buf/buf"
+# Color-highlighted diff(1) output
+brew "colordiff"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
+# File comparison utilities
+brew "diffutils"
+# Isolated development environments using Docker
+brew "docker-compose"
+# More intuitive version of du in rust
+brew "dust"
+# Run arbitrary commands when files change
+brew "entr"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Terminal JSON viewer
+brew "fx"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
+brew "gh"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Small git utilities
+brew "git-extras"
+# Git extension for versioning large files
+brew "git-lfs"
+# Distributed revision control system
+brew "git"
+# Render markdown on the CLI
+brew "glow"
+# Command-line option parsing utility
+brew "gnu-getopt"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU implementation of time utility
+brew "gnu-time"
+# GNU implementation of which utility
+brew "gnu-which"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Vault
+brew "hashicorp/tap/vault"
+# HTTP load generator, ApacheBench (ab) replacement
+brew "hey"
+# Improved top (interactive process viewer)
+brew "htop"
+# Configurable static site generator
+brew "hugo"
+# Command-line benchmarking tool
+brew "hyperfine"
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Run local Kubernetes cluster in Docker
+brew "kind"
+# SDK for building Kubernetes APIs using CRDs
+brew "kubebuilder"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
+# Pager program similar to more
+brew "less"
+# Input filter for the pager less
+brew "lesspipe"
+# Postgres C API library
+brew "libpq", link: true
+# Powerful, lightweight programming language
+brew "lua"
+# Swiss Army Knife for macOS
+brew "m-cli"
+# Utility for directing compilation
+brew "make"
+# Collection of tools that nobody wrote when UNIX was young
+brew "moreutils"
+# Platform built on V8 to build network applications
+brew "node"
+# Replacement for Docker Desktop
+brew "orbstack"
+# Modern replacement for ps written by Rust
+brew "procs"
+# Show ps output as a tree
+brew "pstree"
+# Monitor data's progress through a pipe
+brew "pv"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Rust toolchain installer
+brew "rustup"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# TOML toolkit written in Rust
+brew "taplo"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Linter for Terraform files
+brew "tflint"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Standalone JIT-style runtime for WebAssembly, using Cranelift
+brew "wasmtime"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# UNIX shell (command interpreter)
+brew "zsh"
+
+###############################################################################
+##  Casks                                                                    ##
+###############################################################################
+
+# Command-line interface for 1Password
+cask "1password-cli"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Voice and text chat software
+cask "discord"
+# Developer targeted fonts with a high number of glyphs
+cask "font-dejavu-sans-mono-nerd-font"
+# Free monospaced font with programming ligatures
+cask "font-fira-code"
+# Developer font
+cask "font-fontawesome"
+# Free monospaced font with programming ligatures
+cask "font-hack"
+# Developer targeted fonts with a high number of glyphs
+cask "font-inconsolata-go-nerd-font"
+# Developer font
+cask "font-inconsolata"
+# Developer targeted fonts with a high number of glyphs
+cask "font-input"
+# Developer targeted fonts with a high number of glyphs
+cask "font-iosevka-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Monospaced variant of "San Francisco" by Apple
+cask "font-sf-mono"
+# Monospaced variant of "San Francisco" by Apple
+cask "font-source-code-pro"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Team communication and collaboration software
+cask "slack"
+# Music streaming service
+cask "spotify"
+# Open-source code editor
+cask "visual-studio-code"
+
+###############################################################################
+##  VS Code Extensions                                                       ##
+###############################################################################
+
+vscode "4ops.terraform"
+vscode "alefragnani.project-manager"
+vscode "andrejunges.handlebars"
+vscode "anthropic.claude-code"
+vscode "astral-sh.ty"
+vscode "badeend.vscode-wit"
+vscode "bierner.markdown-mermaid"
+vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "bradlc.vscode-tailwindcss"
+vscode "bufbuild.vscode-buf"
+vscode "bytecodealliance.wit-idl"
+vscode "docker.docker"
+vscode "drblury.protobuf-vsc"
+vscode "dtsvet.vscode-wasm"
+vscode "dustypomerleau.rust-syntax"
+vscode "esbenp.prettier-vscode"
+vscode "fill-labs.dependi"
+vscode "github.copilot-chat"
+vscode "github.copilot"
+vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
+vscode "golang.go"
+vscode "hashicorp.hcl"
+vscode "hashicorp.terraform"
+vscode "jackytsu.text-transformer"
+vscode "mechatroner.rainbow-csv"
+vscode "mfeckies.handlebars-formatter"
+vscode "michael-f-bryan.wit-language-server"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.hexeditor"
+vscode "ms-vscode.live-server"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "mtxr.sqltools"
+vscode "nefrob.vscode-just-syntax"
+vscode "qwtel.sqlite-viewer"
+vscode "redhat.vscode-xml"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "ryanluker.vscode-coverage-gutters"
+vscode "shardulm94.trailing-spaces"
+vscode "stkb.rewrap"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "tamasfe.even-better-toml"
+vscode "vadimcn.vscode-lldb"
+vscode "waderyan.gitblame"
+
+###############################################################################
+##  Cargo crates                                                             ##
+###############################################################################
+
+cargo "cargo-clean-all"
+cargo "cargo-component"
+cargo "cargo-expand"
+cargo "wasm-tools"
+cargo "wkg"
