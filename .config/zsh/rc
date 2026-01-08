@@ -56,7 +56,7 @@ fi
 # Kubectl autocompletion
 source <(kubectl completion zsh)
 alias k=kubectl
-complete -F __start_kubectl k
+compdef k=kubectl
 
 ## Put ~/bin ~/.local/bin $GOPATH/bin ~/.cargo/bin in PATH
 export PATH="$HOME/bin:$PATH"
