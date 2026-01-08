@@ -27,6 +27,6 @@ fi
 
 # Create symlink
 echo "Creating symlink for VSCode settings.json..."
-ln -s "$SCRIPT_DIR/settings.json" "$VSCODE_USER_DIR/settings.json"
+ln -s "$SCRIPT_DIR/User/settings.json" "$VSCODE_USER_DIR/settings.json"
 
 echo "VSCode settings.json symlinked successfully!"
