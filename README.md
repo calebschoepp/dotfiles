@@ -42,7 +42,8 @@ make osx
 
 Already installed via `brew`. The license is in 1Password.
 
-TODO: Monitor resolution configurations
+- LG 27" at 1920x1080
+- LG DualUp at 1600x1800
 
 ### Contexts
 
@@ -98,6 +99,8 @@ TODO: Flesh out
 
 ## Manual Google Chrome configuration
 
+TODO: Flesh out
+
 - Search shortcuts for github `g` and rust docs `r`
 - Extensions
   - 1password
@@ -109,9 +112,3 @@ TODO: Flesh out
   - privacy badger
   - refined github
   - unhook
-
-## TODO
-
-- [ ] Setup zshrc private on new mac
-- [ ] ghostty config from endocrimes dotfiles
-- [ ] Grab scripts from [here](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/)
