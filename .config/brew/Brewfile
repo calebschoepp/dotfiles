@@ -86,6 +86,8 @@ brew "hugo"
 brew "hyperfine"
 # Prompt theme engine for any shell
 brew "oh-my-posh"
+# Git-compatible distributed version control system
+brew "jj"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Handy way to save and run project-specific commands

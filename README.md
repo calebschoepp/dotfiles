@@ -102,6 +102,7 @@ TODO: Flesh out
 TODO: Flesh out
 
 - Search shortcuts for github `g` and rust docs `r`
+- Turn off google password manager
 - Extensions
   - 1password
   - adblcok
