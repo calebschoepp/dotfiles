@@ -1,0 +1,17 @@
+-- Expanded output when needed
+\x auto
+
+-- timing for slow query awareness
+\timing on
+
+-- safer deletes/updates
+\set ON_ERROR_STOP on
+
+-- nicer null display
+\pset null '∅'
+
+-- less pager frustration
+\pset pager on
+
+-- show current DB/user in prompt
+\set PROMPT1 '%n@%/%R%x%# '

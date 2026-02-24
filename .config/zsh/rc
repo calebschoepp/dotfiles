@@ -83,3 +83,6 @@ export GPG_TTY="$(tty)"
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# psql config
+export PSQLRC="$HOME/.config/psql/psqlrc"
