@@ -5,3 +5,6 @@ Session.vim
 
 # OS X
 .DS_Store
+
+# Jujutsu
+.jj
