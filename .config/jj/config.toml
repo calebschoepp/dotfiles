@@ -17,3 +17,9 @@ git.sign-on-push = true
 
 # Sign off commits with Authored-by trailers
 templates.commit_trailers = 'format_signed_off_by_trailer(self)'
+
+# Tug the closest bookmark to the closest pushable commit
+# TODO: Consider improving my tug alias as per https://andre.arko.net/2025/10/15/jj-part-4-configuration/
+revset-aliases."closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+revset-aliases."closest_bookmark(to)" = 'heads(::to & bookmarks())'
+aliases.tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "closest_pushable(@)"]
