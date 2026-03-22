@@ -55,3 +55,7 @@ jj log --color=always
 # [revset-aliases]
 # # set all remote bookmarks (commits pushed to remote branches) to be immutable
 # 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
+
+# TODO: Config inspiration https://github.com/indirect/dotfiles/blob/main/private_dot_config/private_jj/config.toml
+# TODO: Config inspiration https://gist.github.com/thoughtpolice/8f2fd36ae17cd11b8e7bd93a70e31ad6
+# TODO: Config inspiration https://gist.github.com/pksunkara/622bc04242d402c4e43c7328234fd01c
