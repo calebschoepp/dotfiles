@@ -30,9 +30,11 @@ commit_trailers = 'format_signed_off_by_trailer(self)'
 "closest_bookmark(to)" = 'heads(::to & bookmarks())'
 
 [aliases]
+# Shorthands
 c = ["commit"]
 ci = ["commit", "--interactive"]
 e = ["edit"]
+
 # Bring the closest bookmark up to the closest pushable change
 tug = ["util", "exec", "--", "sh", "-c", """
 if [ "x$1" = "x" ]; then
@@ -41,6 +43,7 @@ else
   jj bookmark move --to "closest_pushable(@)" "$@"
 fi
 """, ""]
+
 # Status and log combined
 sl = ["util", "exec", "--", "bash", "-c", """
 set -euo pipefail
