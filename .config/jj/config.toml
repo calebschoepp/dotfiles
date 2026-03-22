@@ -7,6 +7,7 @@ email = "caleb.schoepp@gmail.com"
 [ui]
 diff-editor = ":builtin" # The builtin isn't bad once you learn the hotkeys
 editor = "vim"
+default-command = "sl" # Run this when you type plain `jj`
 
 [template-aliases]
 # Only show the shortest possible name for change IDs
@@ -32,6 +33,19 @@ commit_trailers = 'format_signed_off_by_trailer(self)'
 # Tug the closest bookmark to the closest pushable commit
 # TODO: Consider improving my tug alias as per https://andre.arko.net/2025/10/15/jj-part-4-configuration/
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "closest_pushable(@)"]
+# Status and log combined
+sl = ["util", "exec", "--", "bash", "-c", """
+set -euo pipefail
+
+jj status --color=always | perl -ne '
+  our $stop;
+  my $plain = $_;
+  $plain =~ s/\\e\\[[0-9;]*m//g;
+  $stop = 1 if $plain =~ /^Working copy\\s+\\(@\\)\\s*:/;
+  print $_ unless $stop;
+'
+jj log --color=always
+""", ""]
 
 # TODO: Consider making "commits" you've already pushed immutable https://zerowidth.com/2025/jj-tips-and-tricks/#immutable-branches
 # e.g.
