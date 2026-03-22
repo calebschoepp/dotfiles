@@ -1,25 +1,34 @@
 #:schema https://docs.jj-vcs.dev/latest/config-schema.json
 
-user.name = "Caleb Schoepp"
-user.email = "caleb.schoepp@gmail.com"
+[user]
+name = "Caleb Schoepp"
+email = "caleb.schoepp@gmail.com"
 
-ui.diff-editor = ":builtin" # The builtin isn't bad once you learn the hotkeys
-ui.editor = "vim"
+[ui]
+diff-editor = ":builtin" # The builtin isn't bad once you learn the hotkeys
+editor = "vim"
 
+[template-aliases]
 # Only show the shortest possible name for change IDs
-template-aliases."format_short_change_id(id)" = "id.shortest()"
+"format_short_change_id(id)" = "id.shortest()"
 
 # Configure signing backend as before, but lazily signing only on push.
-signing.behavior = "drop"
-signing.backend = "gpg"
-signing.key = "FEA095EAF754EABA"
-git.sign-on-push = true
+[signing]
+behavior = "drop"
+backend = "gpg"
+key = "FEA095EAF754EABA"
+[git]
+sign-on-push = true
 
 # Sign off commits with Authored-by trailers
-templates.commit_trailers = 'format_signed_off_by_trailer(self)'
+[templates]
+commit_trailers = 'format_signed_off_by_trailer(self)'
 
+[revset-aliases]
+"closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+"closest_bookmark(to)" = 'heads(::to & bookmarks())'
+
+[aliases]
 # Tug the closest bookmark to the closest pushable commit
 # TODO: Consider improving my tug alias as per https://andre.arko.net/2025/10/15/jj-part-4-configuration/
-revset-aliases."closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
-revset-aliases."closest_bookmark(to)" = 'heads(::to & bookmarks())'
-aliases.tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "closest_pushable(@)"]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "closest_pushable(@)"]
