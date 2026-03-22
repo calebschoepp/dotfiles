@@ -32,3 +32,9 @@ commit_trailers = 'format_signed_off_by_trailer(self)'
 # Tug the closest bookmark to the closest pushable commit
 # TODO: Consider improving my tug alias as per https://andre.arko.net/2025/10/15/jj-part-4-configuration/
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "closest_pushable(@)"]
+
+# TODO: Consider making "commits" you've already pushed immutable https://zerowidth.com/2025/jj-tips-and-tricks/#immutable-branches
+# e.g.
+# [revset-aliases]
+# # set all remote bookmarks (commits pushed to remote branches) to be immutable
+# 'immutable_heads()' = "builtin_immutable_heads() | remote_bookmarks()"
