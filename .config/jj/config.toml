@@ -35,6 +35,10 @@ c = ["commit"]
 ci = ["commit", "--interactive"]
 e = ["edit"]
 
+# Git log familiarity
+ll = ["log", "-r", "all()", "--limit", "20"]
+lll = ["log", "-r", "all()"]
+
 # Bring the closest bookmark up to the closest pushable change
 tug = ["util", "exec", "--", "sh", "-c", """
 if [ "x$1" = "x" ]; then
