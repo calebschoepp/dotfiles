@@ -2,7 +2,7 @@
 
 [user]
 name = "Caleb Schoepp"
-email = "caleb.schoepp@gmail.com"
+email = "caleb.schoepp@fermyon.com"
 
 [ui]
 diff-editor = ":builtin" # The builtin isn't bad once you learn the hotkeys
