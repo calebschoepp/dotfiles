@@ -59,7 +59,7 @@ jj status --color=always | perl -ne '
   $stop = 1 if $plain =~ /^Working copy\\s+\\(@\\)\\s*:/;
   print $_ unless $stop;
 '
-jj log --color=always
+jj log --color=always -T builtin_log_oneline --no-pager
 """, ""]
 
 # TODO: Consider making "commits" you've already pushed immutable https://zerowidth.com/2025/jj-tips-and-tricks/#immutable-branches
