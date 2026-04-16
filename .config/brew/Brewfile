@@ -66,6 +66,8 @@ brew "gnu-tar"
 brew "gnu-time"
 # GNU implementation of which utility
 brew "gnu-which"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Fast linters runner for Go
