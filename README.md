@@ -60,13 +60,28 @@ TODO
 
 ### Logi Options+
 
-TODO
+Install and follow setup instructions.
 
 ### Menu World Time
 
-Install via [Appstore](https://apps.apple.com/us/app/menu-world-time/id1446377255)
+Install via [Appstore](https://apps.apple.com/us/app/menu-world-time/id1446377255). Configure the followinging cities:
 
-TODO: Clock configuration
+- Seattle
+- Denver
+- Philadelphia
+- Berlin
+- Wellington
+- New Delhi
+
+Configure as follows:
+
+- `Preferences` > `General Options...`
+  - Enable `Start application at login`
+  - Enable `Show time of day icons`
+  - Enable `Show day difference indicators`
+  - Enable `Show am/pm`
+- `Preferences` > `Menu Bar Options...` > `Berlin`
+  - Enable `Show clock in menu bar`
 
 ### Obsidian
 
@@ -74,7 +89,47 @@ TODO
 
 ### Rectangle Pro
 
-TODO
+Install from [here](https://rectangleapp.com/pro/). The license is in 1Password.
+
+- `General`
+  - Enable `Launch at login`
+- `Layouts`
+  - **Slack Streaming `^9`**
+
+    | App         | Position    | Display     |
+    | ----------- | ----------- | ----------- |
+    | Obsidian    | Bottom Half | 1st Display |
+    | Warp        | Bottom Half | 1st Display |
+    | Spotify     | Bottom Half | 1st Display |
+    | Slack       | Bottom Half | 1st Display |
+    | Figma       | Bottom Half | 1st Display |
+    | Fantastical | Top Half    | 1st Display |
+    | Finder      | Right Half  | 2nd Display |
+    | VS Code     | Left Half   | 2nd Display |
+    | Chrome      | Maximize    | 2nd Display |
+
+  - **Focus `^8`** (+Display, Launch, Minimize-other-apps)
+
+    | App      | Position         | Display     |
+    | -------- | ---------------- | ----------- |
+    | VS Code  | Maximize         | 2nd Display |
+    | Spotify  | Maximize         | 2nd Display |
+    | Obsidian | Maximize         | 2nd Display |
+    | Finder   | Last Third       | 1st Display |
+    | Chrome   | First Two Thirds | 1st Display |
+
+  - **Laptop** (-Display)
+
+    | App      | Position |
+    | -------- | -------- |
+    | Finder   | Maximize |
+    | Chrome   | Maximize |
+    | Obsidian | Maximize |
+    | VS Code  | Maximize |
+    | Figma    | Maximize |
+    | Spotify  | Maximize |
+    | Slack    | Maximize |
+    | Warp     | Maximize |
 
 ### ShurPlus
 
@@ -99,17 +154,20 @@ TODO: Flesh out
 
 ## Manual Google Chrome configuration
 
-TODO: Flesh out
-
 - Search shortcuts for github `g` and rust docs `r`
-- Turn off google password manager
+- `Settings` > `Search Engine` > `Manage search engines and site search` > `Site Search`
+  - `docs.rs` with keyword `r` and URL `https://docs.rs/releases/search?query=%s&i-am-feeling-lucky=1`
+  - `Github` with keyword `g` and URL `https://github.com/%s`
+  - `Github Fermyon Repos` with keyword `gf` and URL `https://github.com/fermyon/%s`
+  - `Github calebschoepp Repos` with keyword `gc` and URL `https://github.com/calebschoepp/%s`
+- Turn off Google Password Manager
 - Extensions
-  - 1password
-  - adblcok
-  - appblock
-  - eyedropper
-  - hit tab and enter on google search results
-  - momentum
-  - privacy badger
-  - refined github
-  - unhook
+  - [1Password](https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en)
+  - [AdBlock](https://chromewebstore.google.com/detail/adblock-%E2%80%94-block-ads-acros/gighmmpiobklfepjocnamgkkbiglidom)
+  - [AppBlock](https://chromewebstore.google.com/detail/appblock-block-sites-stay/lniombipmmhhighllijmcdncnefpjloi?hl=en)
+  - [Eye Dropper](https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka)
+  - [Hit TAB and ENTER on Google Search Results](https://chromewebstore.google.com/detail/hit-tab-and-enter-on-goog/kkldgaaaafjoipnomoinnkccihdiffee)
+  - [Momentum](https://chromewebstore.google.com/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en) (Turn off everything except the clock and right click the chrome footer to disable it)
+  - [Privacy Badger](https://chromewebstore.google.com/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
+  - [Refined Github](https://chromewebstore.google.com/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
+  - [Unhook](https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
