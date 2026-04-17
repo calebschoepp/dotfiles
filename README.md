@@ -25,6 +25,8 @@ make osx
 - `System Settings` > `Trackpad` > `Point & Click`
   - Crank up `Tracking speed` to about 7/10
   - Enable `Tap to click`
+- `System Settings` > `Trackpad` > `Scroll & Zoom`
+  - Enable `Natural scrolling`
 - `System Settings` > `Mouse`
   - Crank up `Tracking speed` to about 8/10
 - `System Settings` > `Keyboard`
