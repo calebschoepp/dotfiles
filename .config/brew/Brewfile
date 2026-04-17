@@ -26,6 +26,8 @@ brew "curl"
 brew "derailed/k9s/k9s"
 # File comparison utilities
 brew "diffutils"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Isolated development environments using Docker
 brew "docker-compose"
 # More intuitive version of du in rust
