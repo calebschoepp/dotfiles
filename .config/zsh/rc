@@ -21,12 +21,6 @@ if [ -f $ZSH_CONFIG_ROOT/prompt.zsh ]; then
   source $ZSH_CONFIG_ROOT/prompt.zsh
 fi
 
-# defaults
-
-if [ -z $GOPATH ]; then
-  export GOPATH="$HOME/src"
-fi
-
 ## Load Configs
 # Inheritance:
 # zsh/alias.sh
