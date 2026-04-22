@@ -12,21 +12,33 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
 
+symlink_vscode_file() {
+    local file_name="$1"
+    local source_file="$SCRIPT_DIR/User/$file_name"
+    local target_file="$VSCODE_USER_DIR/$file_name"
+
+    if [[ -L "$target_file" ]]; then
+        if [[ "$(readlink "$target_file")" == "$source_file" ]]; then
+            echo "VSCode $file_name already symlinked."
+            return
+        fi
+
+        echo "Replacing existing symlink for VSCode $file_name..."
+        rm "$target_file"
+    elif [[ -e "$target_file" ]]; then
+        local backup_file="$target_file.backup.$(date +%Y%m%d-%H%M%S)"
+        echo "Backing up existing VSCode $file_name to $backup_file..."
+        mv "$target_file" "$backup_file"
+    fi
+
+    echo "Creating symlink for VSCode $file_name..."
+    ln -s "$source_file" "$target_file"
+}
+
 # Create VSCode User directory if it doesn't exist
 mkdir -p "$VSCODE_USER_DIR"
 
-# Backup existing settings.json if it exists and is not already a symlink
-if [[ -e "$VSCODE_USER_DIR/settings.json" ]] && [[ ! -L "$VSCODE_USER_DIR/settings.json" ]]; then
-    BACKUP_FILE="$VSCODE_USER_DIR/settings.json.backup.$(date +%Y%m%d-%H%M%S)"
-    echo "Backing up existing settings.json to $BACKUP_FILE..."
-    mv "$VSCODE_USER_DIR/settings.json" "$BACKUP_FILE"
-elif [[ -L "$VSCODE_USER_DIR/settings.json" ]]; then
-    echo "Removing existing symlink..."
-    rm "$VSCODE_USER_DIR/settings.json"
-fi
+symlink_vscode_file "settings.json"
+symlink_vscode_file "keybindings.json"
 
-# Create symlink
-echo "Creating symlink for VSCode settings.json..."
-ln -s "$SCRIPT_DIR/User/settings.json" "$VSCODE_USER_DIR/settings.json"
-
-echo "VSCode settings.json symlinked successfully!"
+echo "VSCode user files symlinked successfully!"
