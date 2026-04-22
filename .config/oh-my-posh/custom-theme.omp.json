@@ -54,6 +54,7 @@
           "properties": {
             "branch_max_length": 25,
             "cache_duration": "none",
+            "disable_with_jj": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
@@ -73,6 +74,22 @@
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:red{{ end }}",
             "{{ if gt .Ahead 0 }}#49416D{{ end }}",
             "{{ if gt .Behind 0 }}#7A306C{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_status": true,
+            "ignore_working_copy": false
+          },
+          "template": " jj {{ if .ClosestBookmarks }}{{ .ClosestBookmarks }} {{ end }}{{ .ChangeID }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
+          "foreground": "p:black",
+          "powerline_symbol": "\ue0b0",
+          "background": "p:green",
+          "type": "jujutsu",
+          "style": "powerline",
+          "background_templates": [
+            "{{ if .Working.Changed }}p:yellow{{ end }}"
           ]
         },
         {
