@@ -345,7 +345,7 @@
     "go.goroot": "/opt/homebrew/Cellar/go/1.24.0/libexec",
     "files.insertFinalNewline": true,
     "github.copilot.nextEditSuggestions.enabled": true,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Dark+",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "[dockercompose]": {
         "editor.insertSpaces": true,
@@ -387,5 +387,6 @@
     "protobuf.externalLinter.enabled": true,
     "protobuf.externalLinter.linter": "buf",
     "protobuf.externalLinter.bufPath": "/opt/homebrew/bin/buf",
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "protobuf.buf.path": "/opt/homebrew/bin/buf"
 }
