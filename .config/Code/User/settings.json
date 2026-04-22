@@ -323,9 +323,7 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "window.commandCenter": false,
     "projectManager.git.baseFolders": [
-        "/Users/caleb/fermyon",
-        "/Users/caleb/src",
-        "/Users/caleb/batcave"
+        "~/src"
     ],
     "trailing-spaces.highlightCurrentLine": false,
     "github.copilot.editor.enableCodeActions": false,
