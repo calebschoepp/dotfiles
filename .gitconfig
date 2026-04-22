@@ -6,6 +6,7 @@
 	gpgsign = true
 [url "git@github.com:"]
 	insteadOf = gh:
+	insteadOf = https://github.com/
 [core]
 	excludesfile = ~/.config/git/gitignore
 	ignorecase = false
