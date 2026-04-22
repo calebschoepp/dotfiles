@@ -3,5 +3,6 @@
 !.config/**
 !bin/
 !bin/**
-!.claude/
-!.claude/**
+!.claude/skills
+!.claude/skills/**
+.config/jj/repos
