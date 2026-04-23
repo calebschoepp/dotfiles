@@ -83,3 +83,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # psql config
 export PSQLRC="$HOME/.config/psql/psqlrc"
+
+# Stop CLI tracking
+export DO_NOT_TRACK=true
