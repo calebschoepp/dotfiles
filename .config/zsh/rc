@@ -53,7 +53,7 @@ alias k=kubectl
 compdef k=kubectl
 
 # jj autocompletion
-source <(jj util completion zsh)
+source <(COMPLETE=zsh jj)
 
 ## Put ~/bin ~/.local/bin $GOPATH/bin ~/.cargo/bin in PATH
 export PATH="$HOME/bin:$PATH"
