@@ -52,6 +52,7 @@ fi
 sl = ["util", "exec", "--", "bash", "-c", """
 set -euo pipefail
 
+{
 jj status --color=always | perl -ne '
   our $stop;
   my $plain = $_;
@@ -60,6 +61,13 @@ jj status --color=always | perl -ne '
   print $_ unless $stop;
 '
 jj log --color=always -T builtin_log_oneline --no-pager
+} | less -FRX
+""", ""]
+
+# Update all revs to the latest main; point to the previous one. https://jonalmeida.com/til/jj-rebase-all/
+hoist = ["util", "exec", "--", "bash", "-c", """
+set -euo pipefail
+jj rebase -s "mutable()&$1+" -d "$2"
 """, ""]
 
 # TODO: Consider making "commits" you've already pushed immutable https://zerowidth.com/2025/jj-tips-and-tricks/#immutable-branches
