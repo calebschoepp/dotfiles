@@ -55,6 +55,9 @@ compdef k=kubectl
 # jj autocompletion
 source <(COMPLETE=zsh jj)
 
+# Spin autocompletion
+source <(COMPLETE=zsh spin maintenance generate-completions)
+
 ## Put ~/bin ~/.local/bin $GOPATH/bin ~/.cargo/bin in PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
